@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Maintenance</title>
+
+    <!-- Font Awesome for Mail Icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Animated Background Circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .circle:nth-child(1) {
+            width: 250px;
+            height: 250px;
+            top: 10%;
+            left: 10%;
+        }
+
+        .circle:nth-child(2) {
+            width: 180px;
+            height: 180px;
+            bottom: 15%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .circle:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            left: 25%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .gear {
+            font-size: 80px;
+            color: #38bdf8;
+            animation: spin 6s linear infinite;
+            margin-bottom: 25px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .email-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s ease;
+        }
+
+        .email-box:hover {
+            transform: translateY(-5px);
+            background: rgba(56,189,248,0.2);
+        }
+
+        .email-box a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .email-box i {
+            font-size: 24px;
+            color: #38bdf8;
+        }
+
+        @media(max-width:768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .gear {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="container">
+        <i class="fas fa-cog gear"></i>
+
+        <h1>Under Maintenance</h1>
+
+        <p>
+            We're currently performing scheduled maintenance to improve your experience.
+            Please check back soon. Thank you for your patience.
+        </p>
+
+        <div class="email-box">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@dipeshbham.com.np">
+                info@dipeshbham.com.np
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
